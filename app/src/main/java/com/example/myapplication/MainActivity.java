@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         AddButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "clicked", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Submitted", Toast.LENGTH_LONG).show();
 
                 Intent AddButtonIntent = new Intent( MainActivity.this, addTask.class);
                startActivity(AddButtonIntent);
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "clicked", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "submitted", Toast.LENGTH_LONG).show();
 
                 Intent allButtonIntent = new Intent( MainActivity.this, AllTasks.class);
                 startActivity(allButtonIntent);
