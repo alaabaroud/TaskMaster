@@ -15,5 +15,8 @@ public class TaskDetails extends AppCompatActivity {
         String TextTitle = getIntent().getStringExtra("detail");
         TextView titleHolder= findViewById(R.id.detail);
         titleHolder.setText(TextTitle);
+
+
+        
     }
 }
