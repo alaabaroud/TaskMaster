@@ -7,9 +7,9 @@
     tools:context=".TaskDetails">
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/detail"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
         android:text="Title"
         app:layout_constraintBottom_toTopOf="@+id/textView5"
         app:layout_constraintEnd_toEndOf="parent"
