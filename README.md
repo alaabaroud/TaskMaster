@@ -16,4 +16,7 @@ we are required to refactor the main activity.
   ![WhatsApp Image 2021-11-20 at 6 30 16 PM](https://user-images.githubusercontent.com/83537397/142733854-2e912047-884c-4e0d-9747-aa968e4f7e08.jpeg)
   ![WhatsApp Image 2021-11-20 at 6 29 38 PM](https://user-images.githubusercontent.com/83537397/142733865-a21be6b9-5383-4e33-94da-a14f2762f9ce.jpeg)
 
-  
+## lab 28 :
+we are required to show a recycleView in the main page with ha coded tasks:
+ps :it is technically working but i have some problem with the fragment constrains.
+![lab28](lab28.jpeg)
