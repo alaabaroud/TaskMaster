@@ -1,4 +1,6 @@
 # TaskMaster
 lab 26 :
-we are required to add to Buttons to the main activity that will lead the user to other pages.
-to run the app use the normal run on Android
+We are required to make 3 activities, each one has a role:
+1- the main activity has an image and two buttons that leads us to the other activities.
+2- all tasks activity which have all the tasks.
+3- add task which adds tasks.
