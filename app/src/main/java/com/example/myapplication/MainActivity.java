@@ -1,6 +1,8 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,6 +13,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,6 +23,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        List<TaskModel> allTasks = new ArrayList<TaskModel>();
+        allTasks.add(new TaskModel("task1","resubmit the lab","new"));
+        allTasks.add(new TaskModel("task2","study","in progress"));
+        allTasks.add(new TaskModel("task3","do the dishes","in progress"));
+
+
+        RecyclerView recyclerView = findViewById(R.id.RecyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(new Adapter(allTasks));
+
 
         Button AddButton = findViewById(R.id.AddButton);
         AddButton.setOnClickListener(new View.OnClickListener() {
@@ -98,4 +112,6 @@ public class MainActivity extends AppCompatActivity {
         TextView userNameHolder = findViewById(R.id.userNameLable);
         userNameHolder.setText(userName);
     }
+
+
 }

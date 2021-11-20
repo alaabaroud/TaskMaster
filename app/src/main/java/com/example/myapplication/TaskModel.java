@@ -3,9 +3,9 @@ package com.example.myapplication;
 public class TaskModel
 {
 
-    private String title;
-    private String body;
-    private String state;
+    public String title;
+    public String body;
+    public String state;
 
     public TaskModel(String title, String body, String state) {
         this.title = title;

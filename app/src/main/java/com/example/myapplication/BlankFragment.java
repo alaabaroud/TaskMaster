@@ -17,12 +17,16 @@ public class BlankFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private static final String ARG_PARAM1 = "Title";
+    private static final String ARG_PARAM2 = "Body";
+    private static final String ARG_PARAM3 = "state";
+
 
     // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private String mTitle;
+    private String mBody;
+    private String mState;
+
 
     public BlankFragment() {
         // Required empty public constructor
@@ -32,16 +36,18 @@ public class BlankFragment extends Fragment {
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
+     * @param mTitle Parameter 1.
+     * @param mBody Parameter 2.
+     * @param mState Parameter 3.
      * @return A new instance of fragment BlankFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static BlankFragment newInstance(String param1, String param2) {
+    public static BlankFragment newInstance(String mTitle, String mBody, String mState) {
         BlankFragment fragment = new BlankFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+        args.putString(ARG_PARAM1, mTitle);
+        args.putString(ARG_PARAM2, mBody);
+        args.putString(ARG_PARAM3, mState);
         fragment.setArguments(args);
         return fragment;
     }
@@ -50,8 +56,11 @@ public class BlankFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            mTitle = getArguments().getString(ARG_PARAM1);
+            mBody = getArguments().getString(ARG_PARAM2);
+            mState = getArguments().getString(ARG_PARAM3);
+
+
         }
     }
 
