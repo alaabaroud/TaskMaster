@@ -12,11 +12,16 @@ public class TaskDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task_details);
 
-        String TextTitle = getIntent().getStringExtra("detail");
-        TextView titleHolder= findViewById(R.id.detail);
-        titleHolder.setText(TextTitle);
+        DataBase db  = DataBase.getDataBaseObj(this.getApplicationContext());
+        TaskDAO taskDao = db.taskDao();
+        Task task = taskDao.findTaskByUid(getIntent().getExtras().getInt("Task1"));
+        TextView Title = findViewById(R.id.detail);
+        Title.setText(task.getTitle());
 
+        TextView Body = findViewById(R.id.DetailsBody);
+        Body.setText(task.getBody());
 
-        
+        TextView Status = findViewById(R.id.DetailsStatus);
+        Status.setText(task.getState());
     }
 }

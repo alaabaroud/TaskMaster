@@ -1,13 +1,29 @@
 package com.example.myapplication;
 
-public class TaskModel
+
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity
+
+public class Task
 {
 
     public String title;
     public String body;
     public String state;
+    @PrimaryKey(autoGenerate = true)
+    public int id;
 
-    public TaskModel(String title, String body, String state) {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Task(String title, String body, String state) {
         this.title = title;
         this.body = body;
         this.state = state;
