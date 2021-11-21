@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity implements Adapter.OnNoteLis
     protected void onResume() {
         super.onResume();
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
-        String userName = sharedPreferences.getString("getUserName","the user didn't add a name yet!");
+        String userName = sharedPreferences.getString("getUserName","add a user name");
 //        Toast.makeText(this, userName,Toast.LENGTH_LONG).show();
         TextView userNameHolder = findViewById(R.id.userNameLable);
         userNameHolder.setText(userName);
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements Adapter.OnNoteLis
 
 
         taskDao.findTaskByUid(task.getId());
-        intent.putExtra("detail1", taskDao.findTaskByUid(task.getId()).getId());
+        intent.putExtra("Task1", taskDao.findTaskByUid(task.getId()).getId());
 
 
 
