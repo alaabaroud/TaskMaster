@@ -32,9 +32,9 @@ public class Adapter  extends  RecyclerView.Adapter<Adapter.TaskViewHolder>{
     public void onBindViewHolder(@NonNull TaskViewHolder holder, int position) {
 
         holder.taskModel= allTasks.get(position);
-        TextView title = holder.itemView.findViewById(R.id.fragmentTitle);
-        TextView body = holder.itemView.findViewById(R.id.body);;
-        TextView state= holder.itemView.findViewById(R.id.state);
+        TextView title = holder.itemView.findViewById(R.id.Title);
+        TextView body = holder.itemView.findViewById(R.id.Body);;
+        TextView state= holder.itemView.findViewById(R.id.State);
 
         title.setText(holder.taskModel.title);
         body.setText(holder.taskModel.body);

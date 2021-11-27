@@ -57,37 +57,37 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button Task1 = findViewById(R.id.Task1);
-        Task1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent goToTask1 = new Intent(MainActivity.this, TaskDetails.class);
-                goToTask1.putExtra("detail", "Task1");
-                startActivity(goToTask1);
-            }
-
-        });
-
-
-        Button Task2 = findViewById(R.id.Task2);
-        Task2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent goToTask2 = new Intent(MainActivity.this, TaskDetails.class);
-                goToTask2.putExtra("detail", "Task2");
-                startActivity(goToTask2);
-            }
-        });
-
-        Button Task3 = findViewById(R.id.Task3);
-        Task3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent goToTask3 = new Intent(MainActivity.this, TaskDetails.class);
-                goToTask3.putExtra("detail", "Task3");
-                startActivity(goToTask3);
-            }
-        });
+//          Button Task1 = findViewById(R.id.Task1);
+//                Task1.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View view) {
+//                        Intent goToTask1 = new Intent(MainActivity.this, TaskDetails.class);
+//                        goToTask1.putExtra("detail", "Task1");
+//                        startActivity(goToTask1);
+//                    }
+//
+//                });
+//
+//
+//                Button Task2 = findViewById(R.id.Task2);
+//                Task2.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View view) {
+//                        Intent goToTask2 = new Intent(MainActivity.this, TaskDetails.class);
+//                goToTask2.putExtra("detail", "Task2");
+//                startActivity(goToTask2);
+//            }
+//        });
+//
+//        Button Task3 = findViewById(R.id.Task3);
+//        Task3.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent goToTask3 = new Intent(MainActivity.this, TaskDetails.class);
+//                goToTask3.putExtra("detail", "Task3");
+//                startActivity(goToTask3);
+//            }
+//        });
 
         Button setting = findViewById(R.id.setting);
         setting.setOnClickListener(new View.OnClickListener() {
