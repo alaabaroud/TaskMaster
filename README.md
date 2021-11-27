@@ -20,3 +20,13 @@ we are required to refactor the main activity.
 we are required to show a recycleView in the main page with ha coded tasks:
 ps :it is technically working but i have some problem with the fragment constrains.
 ![lab28](lab28.jpeg)
+
+
+## lab 32 :
+we are required to move our work to the AWS amplify dataBase (GraphQL):
+- to add tasks:
+  - you can add task on the add- task activity
+  - it will be shown in the main activity recyclerView.
+  
+
+![lab32](TaskMaster\app\src\main\java\com\example\myapplication\lab32.jpeg)

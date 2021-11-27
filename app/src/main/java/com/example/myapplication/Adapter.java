@@ -6,16 +6,15 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.helper.widget.Layer;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Adapter  extends  RecyclerView.Adapter<Adapter.TaskViewHolder>{
-    List<TaskModel> allTasks = new ArrayList<TaskModel>();
+    List<Task> allTasks = new ArrayList<Task>();
 
-    public Adapter(List<TaskModel> allTasks) {
+    public Adapter(List<Task> allTasks) {
         this.allTasks = allTasks;
     }
 
@@ -32,9 +31,9 @@ public class Adapter  extends  RecyclerView.Adapter<Adapter.TaskViewHolder>{
     public void onBindViewHolder(@NonNull TaskViewHolder holder, int position) {
 
         holder.taskModel= allTasks.get(position);
-        TextView title = holder.itemView.findViewById(R.id.fragmentTitle);
-        TextView body = holder.itemView.findViewById(R.id.body);;
-        TextView state= holder.itemView.findViewById(R.id.state);
+        TextView title = holder.itemView.findViewById(R.id.Title);
+        TextView body = holder.itemView.findViewById(R.id.Body);;
+        TextView state= holder.itemView.findViewById(R.id.State);
 
         title.setText(holder.taskModel.title);
         body.setText(holder.taskModel.body);
@@ -54,7 +53,7 @@ public class Adapter  extends  RecyclerView.Adapter<Adapter.TaskViewHolder>{
 
     public static class TaskViewHolder extends RecyclerView.ViewHolder{
 
-        public TaskModel taskModel;
+        public Task taskModel;
 
         public View itemView;
 

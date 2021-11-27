@@ -2,28 +2,52 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".BlankFragment">
 
-    <TextView
-        android:id="@+id/fragmentTitle"
-        android:layout_width="150dp"
-        android:layout_height="101dp"
-        android:text="@string/title"
+    <!-- TODO: Update blank fragment layout -->
 
-        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fragment_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/body"
-        android:layout_width="150dp"
-        android:layout_height="101dp"
-        android:text="@string/string_body" />
+        <TextView
+            android:id="@+id/Title"
+            android:layout_width="79dp"
+            android:layout_height="28dp"
+            android:text="Title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.084"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.162" />
 
+        <TextView
+            android:id="@+id/Body"
+            android:layout_width="80dp"
+            android:layout_height="31dp"
+            android:text="Body"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.163" />
 
-    <TextView
-        android:id="@+id/state"
-        android:layout_width="429dp"
-        android:layout_height="331dp"
-        android:text="@string/string_string_state" />
+        <TextView
+            android:id="@+id/State"
+            android:layout_width="77dp"
+            android:layout_height="34dp"
+            android:text="State"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.467"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.156" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </FrameLayout>
