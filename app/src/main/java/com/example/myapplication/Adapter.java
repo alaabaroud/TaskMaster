@@ -6,16 +6,15 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.helper.widget.Layer;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Adapter  extends  RecyclerView.Adapter<Adapter.TaskViewHolder>{
-    List<TaskModel> allTasks = new ArrayList<TaskModel>();
+    List<Task> allTasks = new ArrayList<Task>();
 
-    public Adapter(List<TaskModel> allTasks) {
+    public Adapter(List<Task> allTasks) {
         this.allTasks = allTasks;
     }
 
@@ -54,7 +53,7 @@ public class Adapter  extends  RecyclerView.Adapter<Adapter.TaskViewHolder>{
 
     public static class TaskViewHolder extends RecyclerView.ViewHolder{
 
-        public TaskModel taskModel;
+        public Task taskModel;
 
         public View itemView;
 

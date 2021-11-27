@@ -1,13 +1,13 @@
 package com.example.myapplication;
 
-public class TaskModel
+public class Task
 {
 
     public String title;
     public String body;
     public String state;
 
-    public TaskModel(String title, String body, String state) {
+    public Task(String title, String body, String state) {
         this.title = title;
         this.body = body;
         this.state = state;
