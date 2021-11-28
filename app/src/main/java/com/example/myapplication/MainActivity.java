@@ -21,6 +21,7 @@ import android.widget.Toast;
 import com.amplifyframework.AmplifyException;
 import com.amplifyframework.api.aws.AWSApiPlugin;
 import com.amplifyframework.api.graphql.model.ModelQuery;
+import com.amplifyframework.auth.cognito.AWSCognitoAuthPlugin;
 import com.amplifyframework.core.Amplify;
 import com.amplifyframework.datastore.generated.model.TaskModel;
 import com.amplifyframework.datastore.generated.model.TaskModel;
@@ -34,15 +35,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        try {
-            // Add these lines to add the AWSApiPlugin plugins
-            Amplify.addPlugin(new AWSApiPlugin());
-            Amplify.configure(getApplicationContext());
-
-            Log.i("MyAmplifyApp", "Initialized Amplify");
-        } catch (AmplifyException error) {
-            Log.e("MyAmplifyApp", "Could not initialize Amplify", error);
-        }
+//        try {
+//            // Add these lines to add the AWSApiPlugin plugins
+//            Amplify.addPlugin(new AWSApiPlugin());
+//            Amplify.configure(getApplicationContext());
+//
+//            Log.i("MyAmplifyApp", "Initialized Amplify");
+//        } catch (AmplifyException error) {
+//            Log.e("MyAmplifyApp", "Could not initialize Amplify", error);
+//        }
 //        List<TaskModel> allTasks = new ArrayList<TaskModel>();
 //        allTasks.add(new TaskModel("task1","resubmit the lab","new"));
 //        allTasks.add(new TaskModel("task2","study","in progress"));
@@ -57,18 +58,34 @@ public class MainActivity extends AppCompatActivity {
         try {
             // Add these lines to add the AWSApiPlugin plugins
             Amplify.addPlugin(new AWSApiPlugin());
+            Amplify.addPlugin(new AWSCognitoAuthPlugin());
+
             Amplify.configure(getApplicationContext());
 
             Log.i("MyAmplifyApp", "Initialized Amplify");
         } catch (AmplifyException error) {
             Log.e("MyAmplifyApp", "Could not initialize Amplify", error);
         }
+//
+//        Amplify.Auth.signOut(
+//                () -> Log.i("AuthQuickstart", "Signed out successfully"),
+//                error -> Log.e("AuthQuickstart", error.toString())
+//        );
+        Amplify.Auth.signInWithWebUI(
+                this,
+                result -> Log.i("AuthQuickStart", result.toString()),
+                error -> Log.e("AuthQuickStart", error.toString())
+        );
 
         List<Task> taskModelsArray=new ArrayList<>();
         RecyclerView recyclerView=findViewById(R.id.RecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new Adapter(taskModelsArray));
 
+        Amplify.Auth.fetchAuthSession(
+                result -> Log.i("AmplifyQuickstart", result.toString()),
+                error -> Log.e("AmplifyQuickstart", error.toString())
+        );
 
         Handler handler = new Handler(Looper.myLooper(), new Handler.Callback() {
             @Override
