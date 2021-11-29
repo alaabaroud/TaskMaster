@@ -2,7 +2,7 @@
   "version": "1",
   "cognitoConfig": {
     "identityPoolName": "taskmaster25167a0b_identitypool_25167a0b",
-    "allowUnauthenticatedIdentities": false,
+    "allowUnauthenticatedIdentities": true,
     "resourceNameTruncated": "taskma25167a0b",
     "userPoolName": "taskmaster25167a0b_userpool_25167a0b",
     "autoVerifiedAttributes": [
