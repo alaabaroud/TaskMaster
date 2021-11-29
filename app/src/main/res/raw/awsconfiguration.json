@@ -61,5 +61,11 @@
                 "EMAIL"
             ]
         }
+    },
+    "S3TransferUtility": {
+        "Default": {
+            "Bucket": "taskmaster60b833df2d544fa2bb6665b15bd4f597171312-alaa",
+            "Region": "us-east-1"
+        }
     }
 }
