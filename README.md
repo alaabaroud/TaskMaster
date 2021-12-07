@@ -31,5 +31,13 @@ we are required to move our work to the AWS amplify dataBase (GraphQL):
 
 ## Cognito lab :
 - sign up added
--loging added
+- loging added
 - logout added
+-------------------------
+
+
+![WhatsApp Image 2021-12-07 at 11 12 19 PM](https://user-images.githubusercontent.com/83537397/145107501-775762d8-2ede-4ce1-93bb-17118b940182.jpeg)
+
+![WhatsApp Image 2021-12-07 at 11 10 58 PM (1)](https://user-images.githubusercontent.com/83537397/145107518-e34862e9-895e-4b1f-b5f7-7552c5f34856.jpeg)
+
+![WhatsApp Image 2021-12-07 at 11 10 58 PM](https://user-images.githubusercontent.com/83537397/145107529-41a66b5b-719f-4aa3-94bb-75fdddbfb4b5.jpeg)
