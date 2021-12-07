@@ -29,3 +29,7 @@ we are required to move our work to the AWS amplify dataBase (GraphQL):
   - it will be shown in the main activity recyclerView.
   ![WhatsApp Image 2021-11-27 at 8 59 22 PM](https://user-images.githubusercontent.com/83537397/143719197-5fc48c9e-08c0-4508-bcc1-4d6d8591640d.jpeg)
 
+## Cognito lab :
+- sign up added
+-loging added
+- logout added
