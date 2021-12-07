@@ -36,7 +36,7 @@
     "sharedId": "25167a0b",
     "resourceName": "taskmaster25167a0b",
     "authSelections": "identityPoolAndUserPool",
-    "useDefault": "defaultSocial",
+    "useDefault": "default",
     "userPoolGroupList": [],
     "serviceName": "Cognito",
     "usernameCaseSensitive": false,
@@ -55,11 +55,7 @@
     },
     "breakCircularDependency": true,
     "dependsOn": [],
-    "hostedUI": true,
-    "hostedUIDomainName": "taskmaster611ecad4-611ecad4",
-    "authProvidersUserPool": [],
-    "hostedUIProviderMeta": "[]",
-    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"myapp://callback/\"],\"LogoutURLs\":[\"myapp://signout/\"]}",
+    "hostedUI": false,
     "authProviders": []
   }
 }
