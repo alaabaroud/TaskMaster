@@ -41,3 +41,13 @@ we are required to move our work to the AWS amplify dataBase (GraphQL):
 ![WhatsApp Image 2021-12-07 at 11 10 58 PM (1)](https://user-images.githubusercontent.com/83537397/145107518-e34862e9-895e-4b1f-b5f7-7552c5f34856.jpeg)
 
 ![WhatsApp Image 2021-12-07 at 11 10 58 PM](https://user-images.githubusercontent.com/83537397/145107529-41a66b5b-719f-4aa3-94bb-75fdddbfb4b5.jpeg)
+
+
+
+Lab 42 : Location :
+
+I added the location to the project.
+--------------------------
+
+
+![WhatsApp Image 2021-12-08 at 9 59 24 PM](https://user-images.githubusercontent.com/83537397/145276022-7e014d17-f646-4424-aa61-f781f5b2e030.jpeg)
