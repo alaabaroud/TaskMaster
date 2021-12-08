@@ -37,6 +37,8 @@ public class Location extends AppCompatActivity {
         lan = findViewById(R.id.lan);
         lng = findViewById(R.id.lng);
 
+        
+
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
         locationbtn.setOnClickListener(new View.OnClickListener() {
             @Override
