@@ -58,9 +58,10 @@
 
         android:layout_width="409dp"
         android:layout_height="99dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -77,14 +78,24 @@
 
     <TextView
         android:id="@+id/loginUser"
-        android:layout_width="379dp"
-        android:layout_height="74dp"
+        android:layout_width="81dp"
+        android:layout_height="61dp"
         android:layout_marginTop="26dp"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/RecyclerView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.204" />
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/Locationbutton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="get location"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setting" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,10 +1,13 @@
 package com.example.myapplication;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.Manifest;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -25,16 +28,20 @@ import com.amplifyframework.auth.cognito.AWSCognitoAuthPlugin;
 import com.amplifyframework.core.Amplify;
 import com.amplifyframework.datastore.generated.model.TaskModel;
 import com.amplifyframework.datastore.generated.model.TaskModel;
+import com.google.android.gms.location.FusedLocationProviderClient;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-
+TextView Cityloc,lan,lng;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+         FusedLocationProviderClient fusedLocationClient;
+
 
 
 //        List<TaskModel> allTasks = new ArrayList<TaskModel>();
@@ -59,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
         } catch (AmplifyException error) {
             Log.e("MyAmplifyApp", "Could not initialize Amplify", error);
         }
+
         Amplify.Auth.signInWithWebUI(
                 this,
                 result -> Log.i("AuthQuickStart", result.toString()),
@@ -78,31 +86,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-//        Button singup = findViewById(R.id.singup);
-//        singup.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Amplify.Auth.signInWithWebUI(
-//                        MainActivity.this,
-//                        result -> Log.i("AuthQuickStart", result.toString()),
-//                        error -> Log.e("AuthQuickStart", error.toString())
-//
-//                );
-//                Toast.makeText(MainActivity.this,"signing up",Toast.LENGTH_LONG).show();
-//            }
-//        });
-//
-//        Button logout = findViewById(R.id.logout);
-//        logout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Amplify.Auth.signOut(
-//                        () -> Log.i("AuthQuickstart", "Signed out successfully"),
-//                        error -> Log.e("AuthQuickstart", error.toString())
-//                );
-//                Toast.makeText(MainActivity.this,"logged out",Toast.LENGTH_LONG).show();
-//            }
-//        });
 
         List<Task> taskModelsArray=new ArrayList<>();
         RecyclerView recyclerView=findViewById(R.id.RecyclerView);
@@ -170,6 +153,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent Setting = new Intent(MainActivity.this, Settings.class);
             startActivity(Setting);
+
+            }
+        });
+        Button Locationbutton1 = findViewById(R.id.Locationbutton1);
+        Locationbutton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent Location = new Intent(MainActivity.this, Location.class);
+                startActivity(Location);
 
             }
         });
