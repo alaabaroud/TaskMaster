@@ -72,24 +72,14 @@
         android:id="@+id/addTask"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="56dp"
         android:text="ADD Task"
-        app:layout_constraintBottom_toTopOf="@+id/submitted"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.122"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/statusName"
-        app:layout_constraintVertical_bias="0.442" />
-
-    <TextView
-        android:id="@+id/submitted"
-        android:layout_width="115dp"
-        android:layout_height="39dp"
-        android:layout_marginBottom="48dp"
-        android:text="Total tasks: 0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.253"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
 
     <TextView
         android:id="@+id/textView8"
@@ -115,5 +105,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8"
         app:layout_constraintVertical_bias="0.473" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
