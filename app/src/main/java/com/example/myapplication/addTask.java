@@ -7,6 +7,7 @@ import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.Html;
 import android.util.Log;
@@ -29,12 +30,16 @@ import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
 
 public class addTask extends AppCompatActivity {
 
+    Uri path;
+
+    String fileName;
 
     FusedLocationProviderClient fusedLocationProviderClient;
 
@@ -45,9 +50,16 @@ public class addTask extends AppCompatActivity {
 
 
 
+        Intent intent = getIntent();
+        String action = intent.getAction();
+        String type = intent.getType();
+        if (Intent.ACTION_SEND.equals(action) && type != null) {
+            if (type.startsWith("image/")) {
+                handleSendImage(intent); // Handle single image being sent
+            }
+        }
 
-//        TextView showSubmission=findViewById(R.id.submitted);
-//        showSubmission.setText("Submission");
+
 
 
         EditText titleName = findViewById(R.id.titleName);
@@ -92,6 +104,13 @@ public class addTask extends AppCompatActivity {
             }
         });
     }
-
+    public void handleSendImage(Intent intent) {
+        Uri imageUri = (Uri) intent.getParcelableExtra(Intent.EXTRA_STREAM);
+        if (imageUri != null) {
+            File files = new File(imageUri.getPath());
+            fileName = files.getName();
+            Toast.makeText(getApplicationContext(),imageUri.getPath(),Toast.LENGTH_SHORT).show();
+        }
+    }
 
 }
